@@ -9,7 +9,7 @@ import {
     useColorModeValue,
     VisuallyHidden,
 } from '@chakra-ui/react';
-import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
+import { FaInstagram, FaTwitter, FaYoutube, FaGithub } from 'react-icons/fa';
 import * as React from 'react'
 
 const SocialButton = ({
@@ -74,14 +74,17 @@ export default function Footer() {
                     align={{ base: 'center', md: 'center' }}>
                     <Text>© 2021 Paiting with Pixels. All rights reserved</Text>
                     <Stack direction={'row'} spacing={6}>
-                        <SocialButton label={'Twitter'} href={'#'}>
+                        {/* <SocialButton label={'Twitter'} href={'#'}>
                             <FaTwitter />
-                        </SocialButton>
+                        </SocialButton> */}
                         <SocialButton label={'YouTube'} href={'#'}>
                             <FaYoutube />
                         </SocialButton>
-                        <SocialButton label={'Instagram'} href={'#'}>
+                        {/* <SocialButton label={'Instagram'} href={'#'}>
                             <FaInstagram />
+                        </SocialButton> */}
+                        <SocialButton label={'Github'} href={'https://github.com/fernandobelotto'} target="_blank">
+                            <FaGithub />
                         </SocialButton>
                     </Stack>
                 </Container>

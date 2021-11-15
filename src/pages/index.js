@@ -29,22 +29,22 @@ const BlogIndex = ({ data, location }) => {
   return (
     <>
       <Layout location={location} title={siteTitle}>
-        <Seo title="All posts" />
-        <Bio />
-        <VStack spacing={3}>
+        <div className="global-wrapper">
+          <Seo title="All posts" />
+          <Bio />
+          <VStack spacing={3}>
+            {
+              posts.map(post => {
+                const title = post.frontmatter.title || post.fields.slug
+                const description = post.frontmatter.description || 'fallback'
 
-          {
-            posts.map(post => {
-              const title = post.frontmatter.title || post.fields.slug
-              const description = post.frontmatter.description || 'fallback'
-
-              return (
-                <BlogPostCard title={title} description={description} date={post.frontmatter.date} link={post.fields.slug} />
-              )
-            })
-          }
-        </VStack>
-
+                return (
+                  <BlogPostCard title={title} description={description} date={post.frontmatter.date} link={post.fields.slug} />
+                )
+              })
+            }
+          </VStack>
+        </div>
       </Layout>
     </>
   )

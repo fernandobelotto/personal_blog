@@ -18,9 +18,7 @@ const Layout = ({ location, title, children }) => {
   return (
     <>
       <NavBar />
-      <div className="global-wrapper" data-is-root-path={isRootPath}>
-        <main>{children}</main>
-      </div>
+      <main>{children}</main>
       <Footer />
     </>
   )

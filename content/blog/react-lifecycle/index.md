@@ -148,4 +148,4 @@ Por gerar confusão e alguns bugs difícieis de resolver, alguns métodos do cic
 ### Resumo
 
 O diagrama a seguir resumo bem os três ciclos de vida e os métodos que discutirmos na sua sequência de execução:
-![resumo](./resumo.png)
+![resumo](./resume.png)
